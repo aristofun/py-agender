@@ -1,0 +1,7 @@
+datasets
+data
+txt
+results
+*.pyc
+.venv
+*.hdf5

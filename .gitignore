@@ -1,7 +1,8 @@
-datasets
-data
-txt
-results
 *.pyc
 .venv
 *.hdf5
+# Setuptools distribution folder.
+/dist/
+
+# Python egg metadata, regenerated from source files by setuptools.
+/*.egg-info

@@ -1,18 +1,8 @@
-# https://github.com/keras-team/keras/issues/1406
-# doesn't work :(
-import sys
-stdout = sys.stdout
-sys.stdout = open('/dev/null', 'w')
-
 import os
 import cv2
 import argparse
-
-from pyagender import PyAgender
+from pyagender.pyagender import PyAgender
 from keras.utils.data_utils import get_file
-
-# https://github.com/keras-team/keras/issues/1406
-sys.stdout = stdout
 
 # 64x64 (RGB, padded) IMDB dataset trained for 28 epochs
 pretrained_model = "https://github.com/yu4u/age-gender-estimation/releases/download/v0.5/weights.28-3.73.hdf5"
@@ -35,10 +25,9 @@ def main():
                            file_hash=modhash,
                            cache_dir=os.path.dirname(os.path.abspath(__file__)))
 
-    pyagender = PyAgender()
+    pyagender = PyAgender(resnet_weights=weight_file)
 
-    # TODO: clarify trained model colorspace, assuming BGR default so far
-    # image = cv2.cvtColor(cv2.imread(args.IMAGE), cv2.COLOR_BGR2RGB)
+    # trained model colorspace seems like BGR https://github.com/yu4u/age-gender-estimation/issues/51
     image = cv2.imread(args.IMAGE)
     faces = pyagender.detect_genders_ages(image)
 

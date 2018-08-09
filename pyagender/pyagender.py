@@ -3,10 +3,11 @@ import sys
 import cv2
 import numpy as np
 
+
 sys.setrecursionlimit(2 ** 20)
 # np.random.seed(2 ** 10)
 
-from wide_resnet import WideResNet
+from pyagender.wide_resnet import WideResNet
 
 
 class PyAgender():
@@ -46,7 +47,7 @@ class PyAgender():
                   
                  gender > 0.5 == female
         """
-        faceregions = self.detect_faces(image, margin=0.3)
+        faceregions = self.detect_faces(image, margin=0.4)
 
         for face in faceregions:
             face['gender'], face['age'] = self.gender_age(image,

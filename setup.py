@@ -1,4 +1,5 @@
 import setuptools
+import pyagender
 
 REQUIRED_PACKAGES = [
     'numpy >= 1.12',
@@ -16,7 +17,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="py-agender",
-    version="0.0.3",
+    version=pyagender.VERSION,
     author="Michael Butlitsky",
     author_email="aristofun@yandex.ru",
     description="Simple opencv & tensorflow based solution to estimate Faces, Age and Gender on pictures",

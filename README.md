@@ -7,20 +7,20 @@ Based on and forked from: https://github.com/yu4u/age-gender-estimation
 Good enough for pet-projects and prototypes, but not ready for production 
 real-life applications
 
-## Installation 
+## How
 
 ```commandline
 pip3 install py-agender
 ```
+Warning — ~190MB download (pretrained network is heavy).
 
-## Console 
+CLI: 
 
 ```commandline
 py-agender PATH_TO_IMAGE
 ```
 
-## Python
-
+Python:
 
 ```python
 from pyagender import PyAgender
@@ -37,7 +37,7 @@ faces = agender.detect_genders_ages(cv2.imread(MY_IMAGE))
 # Additional options & methods in PyAgender source
 ``` 
 
-Don't forget to download pretrained weights of using source code DIY style.
+Don't forget to download pretrained weights if using source code DIY style.
 
 ## TODO: 
 - add options (like STDIN input, output formatters etc.) for useful commandline 

@@ -3,7 +3,7 @@ import setuptools
 REQUIRED_PACKAGES = [
     'numpy >= 1.13',
     'Keras >= 2.1',
-    'TensorFlow >= 1.9, < 1.99',
+    'TensorFlow >= 1.9, < 1.19',
     'opencv-python >= 3.3.0+contrib, < 3.99'
 ]
 

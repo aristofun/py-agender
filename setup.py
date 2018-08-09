@@ -41,6 +41,7 @@ setuptools.setup(
         'License :: Other/Proprietary License',
         "Operating System :: OS Independent",
     ),
+    include_package_data=True,
     zip_safe=False,
     install_requires=REQUIRED_PACKAGES,
     entry_points={'console_scripts': CONSOLE_SCRIPTS})

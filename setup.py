@@ -1,9 +1,9 @@
 import setuptools
 
 REQUIRED_PACKAGES = [
-    'numpy >= 1.13',
+    'numpy >= 1.12',
     'Keras >= 2.1',
-    'TensorFlow >= 1.9, < 1.19',
+    'TensorFlow >= 1.10, < 1.19',
     'opencv-python >= 3.3.0+contrib, < 3.99'
 ]
 
@@ -16,7 +16,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="py-agender",
-    version="0.0.2",
+    version="0.0.3",
     author="Michael Butlitsky",
     author_email="aristofun@yandex.ru",
     description="Simple opencv & tensorflow based solution to estimate Faces, Age and Gender on pictures",
@@ -42,4 +42,4 @@ setuptools.setup(
     ),
     zip_safe=False,
     install_requires=REQUIRED_PACKAGES,
-    entry_points={'console_scripts': CONSOLE_SCRIPTS })
+    entry_points={'console_scripts': CONSOLE_SCRIPTS})

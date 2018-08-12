@@ -1,3 +1,2 @@
-include pyagender/pretrained_models/*.xml
-recursive-exclude * *.hdf5
+include pyagender/pretrained_models/*.*
 prune test*

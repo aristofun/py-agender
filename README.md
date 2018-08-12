@@ -13,13 +13,8 @@ real-life applications
 pip3 install py-agender
 ```
 
-R equired dry-run for weights download:
+Warning — ~190MB download (pretrained network is heavy).  
 
-```commandline
-py-agender  
-```
-
-Warning — ~190MB download (pretrained network is heavy).
 
 CLI: 
 

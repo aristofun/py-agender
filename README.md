@@ -46,6 +46,7 @@ Don't forget to download pretrained weights if using source code DIY style.
 applications 
 - add help output
 - train better network with higher image resolution
+- train another (more compact & precise) network architecture
 
 ## Tests
 

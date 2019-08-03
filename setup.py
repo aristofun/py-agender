@@ -8,6 +8,11 @@ REQUIRED_PACKAGES = [
     'opencv-python >= 3.3.0+contrib, < 3.99'
 ]
 
+EXTRAS_REQUIRE = {
+    "cpu": ["tensorflow>=1.10.0, < 1.19.0"],
+    "gpu": ["tensorflow-gpu>=1.10.0, < 1.19.0"],
+}
+
 CONSOLE_SCRIPTS = [
     'py-agender = pyagender.pyagender_cli:main'
 ]
@@ -44,4 +49,6 @@ setuptools.setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=REQUIRED_PACKAGES,
-    entry_points={'console_scripts': CONSOLE_SCRIPTS})
+    extras_require=EXTRAS_REQUIRE,
+    entry_points={'console_scripts': CONSOLE_SCRIPTS}
+)

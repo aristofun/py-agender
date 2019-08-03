@@ -2,7 +2,7 @@ import os
 import cv2
 import argparse
 from pyagender.pyagender import PyAgender
-from pyagender import VERSION
+from pyagender import __version__
 from keras.utils.data_utils import get_file
 
 # 64x64 (RGB, padded) IMDB dataset trained for 28 epochs
@@ -25,7 +25,7 @@ def main():
     args = get_args()
 
     if args.v:
-        print(f'{VERSION}, model: {pretrained_model_filename}')
+        print(f'{__version__}, model: {pretrained_model_filename}')
         exit()
 
     weight_file = get_file(pretrained_model_filename, pretrained_model,

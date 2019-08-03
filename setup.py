@@ -1,12 +1,12 @@
+import os.path
 import setuptools
-import pyagender
 
-REQUIRED_PACKAGES = [
-    'numpy >= 1.12',
-    'Keras >= 2.1',
-    'TensorFlow >= 1.10, < 1.19',
-    'opencv-python >= 3.3.0+contrib, < 3.99'
-]
+# load version data
+with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'pyagender', 'version.py')) as f:
+    exec(f.read())
+
+with open('requirements.txt') as f:
+    REQUIRED_PACKAGES = f.read().split('\n')
 
 EXTRAS_REQUIRE = {
     "cpu": ["tensorflow>=1.10.0, < 1.19.0"],
@@ -17,12 +17,12 @@ CONSOLE_SCRIPTS = [
     'py-agender = pyagender.pyagender_cli:main'
 ]
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+with open("README.md", "r") as f:
+    long_description = f.read()
 
 setuptools.setup(
     name="py-agender",
-    version=pyagender.VERSION,
+    version=__version__,
     author="Michael Butlitsky",
     author_email="aristofun@yandex.ru",
     description="Simple opencv & tensorflow based solution to estimate Faces, Age and Gender on pictures",

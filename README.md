@@ -13,7 +13,7 @@ real-life applications
 pip3 install py-agender
 ```
 
-Warning — ~190MB download (pretrained network is heavy).  
+**Warning**: ~190MB download (pretrained network is heavy).  
 
 
 CLI: 

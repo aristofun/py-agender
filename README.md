@@ -10,7 +10,8 @@ real-life applications
 ## How
 
 ```commandline
-pip3 install py-agender
+pip3 install py-agender[cpu]  # for the cpu version of TensorFlow
+pip3 install py-agender[gpu]  # for the gpu version of TensorFlow
 ```
 
 **Warning**: ~190MB download (pretrained network is heavy).  
@@ -46,6 +47,7 @@ Don't forget to download pretrained weights if using source code DIY style.
 applications 
 - add help output
 - train better network with higher image resolution
+- train another (more compact & precise) network architecture
 
 ## Tests
 
@@ -54,10 +56,10 @@ python3 -m unittest
 ```
 
 ## Dependencies
-- Python 3.5, 3.6
+- Python 3.5, 3.6, 3.7
 - numpy ~> 1.15
 - Keras ~> 2.2
-- TensorFlow ~> 1.9
+- tensorflow or tensorflow-gpu ~> 1.10
 - opencv-python ~> 3.4.2+contrib
 
 Tested on:

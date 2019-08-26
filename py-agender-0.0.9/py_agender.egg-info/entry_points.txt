@@ -1,0 +1,3 @@
+[console_scripts]
+py-agender = pyagender.pyagender_cli:main
+

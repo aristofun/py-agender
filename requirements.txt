@@ -1,4 +1,4 @@
 numpy>=1.13,<=1.15.9
-Keras>=2.2,<2.99
-opencv-python>=3.4.2+contrib,<3.99
+Keras>=2.2.4,<2.2.5
+opencv-python>=3.4.2+contrib,<3.5
 twine>=1.10

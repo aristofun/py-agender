@@ -2,7 +2,7 @@ import os.path
 import setuptools
 
 # load version data
-with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'version.py')) as f:
+with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'pyagender', 'version.py')) as f:
     exec(f.read())
 
 with open('requirements.txt') as f:

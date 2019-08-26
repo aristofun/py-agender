@@ -1,2 +1,0 @@
-include pyagender/pretrained_models/*.*
-prune test*

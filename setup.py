@@ -1,9 +1,5 @@
-import os.path
+import pyagender
 import setuptools
-
-# load version data
-with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'version.py')) as f:
-    exec(f.read())
 
 with open('requirements.txt') as f:
     REQUIRED_PACKAGES = f.read().split('\n')
@@ -22,7 +18,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="py-agender",
-    version=__version__,
+    version=pyagender.VERSION,
     author="Michael Butlitsky",
     author_email="aristofun@yandex.ru",
     description="Simple opencv & tensorflow based solution to estimate Faces, Age and Gender on pictures",
